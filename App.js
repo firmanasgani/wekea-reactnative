@@ -1,21 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native'
+import React from 'react'
+import GlobalStyles from './src/styles/GlobalStyles'
+import Routes from './src/routes'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.textWhite}>Hello world</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
  
-});
+  return (
+    <SafeAreaView style={GlobalStyles.safeAreaStyle}>
+      <Routes />
+    </SafeAreaView>
+  )
+}
